@@ -1,0 +1,87 @@
+Problem Statement:
+Create a program that will ask the user to enter input about what type of 
+garden they want to build. Based on their input it will return plant 
+suggestions that fit their criteria for their garden.
+
+Nouns: garden, plant suggestions
+
+Verbs: ask user to enter input, return
+
+
+Defining Diagram:
+INPUTS:
+  userInput
+
+PROCESSING:
+  prompt for userInput
+  compare userInput to gardenType
+  display plantOptions
+  
+OUTPUTS:
+  plantOptions
+  
+
+Pseudocode:
+plantOptionsByGardenType
+  initialize userInput to ""
+  initialize shadeGarden to an array
+  initialize sunGarden to an array
+  initialize keepLooping to true
+  initialize output to ""
+    
+  while keepLooping is true 
+    prompt for userInput
+    if userInput is equal to done
+      keepLooping equals false
+      output done message  
+    else 
+      if userInput is equal to shade
+      output = shadeGarden array
+      else
+        if userInput is equal to sun
+        output = sunGarden array
+          else
+            output try again message
+        endif
+      endif  
+    endif
+  endwhile
+        
+  display output
+
+
+Test Plans:
+VARIABLES:
+  userInput  
+  
+TEST CASE 1:
+
+  INPUT VALUES: shade
+
+  EXPECTED RESULT: hosta, bleeding heart, ferns, coral bells, lily of the valley, solomon's seal
+
+  ACTUAL RESULT: hosta, bleeding heart, ferns, coral bells, lily of the valley, solomon's seal
+
+TEST CASE 2:
+
+  INPUT VALUES: sun
+
+  EXPECTED RESULT: coneflower, phlox, asiatic lily, salvia, bee balm, black-eyed susan, coreopsis
+
+  ACTUAL RESULT: coneflower, phlox, asiatic lily, salvia, bee balm, black-eyed susan, coreopsis
+
+TEST CASE 3:
+
+  INPUT VALUES: done
+
+  EXPECTED RESULT: Happy Planting!
+
+  ACTUAL RESULT: Happy Planting!
+  
+TEST CASE :
+
+  INPUT VALUES: junk
+
+  EXPECTED RESULT: Try Again.
+
+  ACTUAL RESULT: Try Again.  
