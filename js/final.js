@@ -1,8 +1,11 @@
+// programming fundamentals final project - Monica Rood 2023
+// displays list of plants based on user input
+
 var form = document.getElementById("plants_by_garden_type_form");
 
 form.addEventListener("submit", function(event){
   event.preventDefault();
-  // declare variables
+  // declare variables & get input from page
   var userInput = document.getElementById("userInput").value;
   var keepLooping = true;
   var shadeGarden= ["hosta", "bleeding heart", "ferns", "coral bells", "lily of the valley", "solomon's seal"];
@@ -28,6 +31,7 @@ form.addEventListener("submit", function(event){
   
   break;
 }
+  // display output on page
   var outputArea = document.getElementById("output");
   outputArea.innerHTML = output;
 });
